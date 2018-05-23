@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Test/Scenes/TestWeather.unity
+  isLoaded: 1
+  isActive: 1
