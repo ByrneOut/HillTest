@@ -6,6 +6,7 @@ Shader "Sprites/Hologram"
 	{
 		_MainTex ("Texture", 2D) = "white" {}
 		_Color ("Color", Color) = (1, 0, 0, 1)
+
 		_Bias("Bias", Float) = 0
 		_ScanningFrequency ("Scanning Frequency", Float) = 100
 		_ScanningSpeed ("Scanning Speed", Float) = 100
@@ -69,7 +70,7 @@ Shader "Sprites/Hologram"
 				col *= 1 - max(0, cos(i.objVertex.x * _ScanningFrequency + _Time.x * _ScanningSpeed) + 0.9);
 				col *= 1 - max(0, cos(i.objVertex.z * _ScanningFrequency + _Time.x * _ScanningSpeed) + 0.9);
 				col.a *= alpha;
-				return col;
+				return col*0.5;
 			}
 			ENDCG
 		}
